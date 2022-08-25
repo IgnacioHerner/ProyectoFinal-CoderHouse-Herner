@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONTS-->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!--BOOSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Tu Wallet JS</title>
+</head>
+
+<body>
+
+
+    <div class="side-navbar d-flex justify-content-between flex-wrap flex-column" id="sidebar">
+        <ul class="nav flex-column text-white w-100">
+            <p id="user" class="ml-2 h3"></p>
+            <div class="text-center total mt-5 col-md-12 text-left">Tu dinero es</div>
+            <div id="wallet-sidebar" class="text-left p-0 mt-2" class="text-center"></div>
+        </ul>
+    </div>
+
+    <div class="pl-5 ml-5 my-container position-fixed">
+        <a class="ml-5 btn border-5" id="menu-btn"> Menu
+        </a>
+        <a class="ml-5 btn border-5 btn_tema" id="boton1">Para el profe</a>
+    </div>
+
+    <section class="ftco-section col-sm-8">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-5 mb-5">
+                    <h1 class="display-2 mt-5">Tu Wallet JS!</h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-12 col-md-12">
+                    <div class="wrapper bgblue criptocoin_container">
+                        <div class="row no-gutters">
+                            <div class="col-md-8 d-flex align-items-stretch">
+                                <div class=" w-80 p-md-5 p-4  ">
+                                    <h3 class="mb-5 p-2 text-center display-5 tituloCarta">Deposita tu dinero, extraelo, o
+                                        simplemente cambialo por tus cryptos favoritas.</h3>
+                                    <div id="form-message-warning" class="mb-4"></div>
+                                    <div class="container">
+                                        <div class="total mb-2 col-md-12 text-center">Hoy tengo en la wallet...</div>
+                                        <div id="wallet" class="text-center"></div>
+                                    </div>
+                                    <div class="container w-100 p-5 rounded border-warning">
+                                        <div class="container-fluid">
+                                            <div class="text-left text-l yellow " id="validate"></div>
+                                            <input id="amountIn" type="number" class="col-md-5 text-center"
+                                                placeholder="Ingrese monto"></input>
+                                            <button id="amountInBtn"
+                                                class="col-md-6 mb-1 text-center btn btnIn btn-light"> Ingresar
+                                                dinero</button>
+                                        </div>
+                                        <div class="container-fluid">
+
+                                            <input id="amountOut" type="number" class="col-md-5 text-center"
+                                                placeholder="Ingrese monto a retirar"></input>
+                                            <button id="amountOutBtn"
+                                                class="col-md-6 mb-1 text-center btn btnOut btn-light"> Extraer
+                                                dinero</button>
+                                        </div>
+                                        <div class="container-fluid">
+
+                                            <input id="exchange" type="number" class="col-md-5 text-center"
+                                                label="Ingrese el dinero a cambiar"
+                                                placeholder="Ingrese monto en pesos"></input>
+                                            <button id="btnExchange"
+                                                class="col-md-6 mb-1 text-center btn btnOut btn-light"
+                                                onclick="cryptoTrade()">Comprar crypto</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Cripto Values Aside-->
+                            <div class="col-md-4 d-flex align-items-stretch">
+                                <div class="w-100 p-4 ml-1">
+                                    <h3 class="mb-4 mt-md-4 ">CryptoCoins Market</h3>
+                                    <p id="values"></p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
